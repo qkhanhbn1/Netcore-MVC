@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "get product";
+}
+
+<h2>Dữu liệu lấy ra từ ViewBag</h2>
+<p>Mã sản phẩm: @ViewBag.product.ProductId</p>
+<p>Tên sản phẩm: @ViewBag.product.ProductName</p>
+<p>Năm: @ViewBag.product.YearRelease</p>
+<p>Giá: @ViewBag.product.Price</p>
+
+<h2>Dữ liệu lấy từ ViewData</h2>
+@{
+    var product = ViewData["productVd"] as SS02.Models.Product;
+}
+<p>Mã sản phẩm: @product.ProductId</p>
+<p>Tên sản phẩm: @product.ProductName</p>
+<p>năm: @product.YearRelease</p>
+<p>giá: @product.Price</p>
+

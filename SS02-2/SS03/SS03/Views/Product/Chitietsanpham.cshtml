@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Chi tiết sản phẩm";
+    var product = ViewBag.product;
+}
+<h2>Chi tiết sản phẩm</h2>
+<div class="row">
+    <div class="col-md-4">
+        <img src="@product.Avatar" alt="" style="width=200px" />
+    </div>
+    <div class="col-md-8">
+        <h2>Sản phẩm: @product.SanPham</h2>
+        <h3><del>Giá gốc:@product.Giacu</del> Giá mới:@product.Giamoi</h3>
+        <h3>Mô tả:<br />@product.Mota</h3>
+        <h3>Trạng thái:@product.Trangthai</h3>
+        <h3>Ngày đăng: @product.Ngaydang</h3>
+        <p>
+            <a asp-controller="Product" asp-action="Index" class="btn btn-sm btn-danger">Về danh sách</a>
+        </p>
+    </div>
+</div>
