@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lesson04Lab\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5B9FA155-EC95-48CE-816B-208DBC029F7A}|Lesson04Lab\\Lesson04Lab.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lesson04lab\\lesson04lab\\views\\peoples\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B9FA155-EC95-48CE-816B-208DBC029F7A}|Lesson04Lab\\Lesson04Lab.csproj|solutionrelative:lesson04lab\\views\\peoples\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B9FA155-EC95-48CE-816B-208DBC029F7A}|Lesson04Lab\\Lesson04Lab.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lesson04lab\\lesson04lab\\views\\peoples\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B9FA155-EC95-48CE-816B-208DBC029F7A}|Lesson04Lab\\Lesson04Lab.csproj|solutionrelative:lesson04lab\\views\\peoples\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B9FA155-EC95-48CE-816B-208DBC029F7A}|Lesson04Lab\\Lesson04Lab.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lesson04lab\\lesson04lab\\controllers\\peoplescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9FA155-EC95-48CE-816B-208DBC029F7A}|Lesson04Lab\\Lesson04Lab.csproj|solutionrelative:lesson04lab\\controllers\\peoplescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B9FA155-EC95-48CE-816B-208DBC029F7A}|Lesson04Lab\\Lesson04Lab.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lesson04lab\\lesson04lab\\views\\peoples\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B9FA155-EC95-48CE-816B-208DBC029F7A}|Lesson04Lab\\Lesson04Lab.csproj|solutionrelative:lesson04lab\\views\\peoples\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B9FA155-EC95-48CE-816B-208DBC029F7A}|Lesson04Lab\\Lesson04Lab.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lesson04lab\\lesson04lab\\models\\datalocal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B9FA155-EC95-48CE-816B-208DBC029F7A}|Lesson04Lab\\Lesson04Lab.csproj|solutionrelative:lesson04lab\\models\\datalocal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lesson04Lab\\Lesson04Lab\\Views\\Peoples\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Lesson04Lab\\Views\\Peoples\\Edit.cshtml",
+              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lesson04Lab\\Lesson04Lab\\Views\\Peoples\\Edit.cshtml",
+              "RelativeToolTip": "Lesson04Lab\\Views\\Peoples\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T03:39:32.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lesson04Lab\\Lesson04Lab\\Views\\Peoples\\Create.cshtml",
+              "RelativeDocumentMoniker": "Lesson04Lab\\Views\\Peoples\\Create.cshtml",
+              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lesson04Lab\\Lesson04Lab\\Views\\Peoples\\Create.cshtml",
+              "RelativeToolTip": "Lesson04Lab\\Views\\Peoples\\Create.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T03:39:30.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lesson04Lab\\Lesson04Lab\\Views\\Peoples\\Index.cshtml",
+              "RelativeDocumentMoniker": "Lesson04Lab\\Views\\Peoples\\Index.cshtml",
+              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lesson04Lab\\Lesson04Lab\\Views\\Peoples\\Index.cshtml",
+              "RelativeToolTip": "Lesson04Lab\\Views\\Peoples\\Index.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-14T03:26:23.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PeoplesController.cs",
+              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lesson04Lab\\Lesson04Lab\\Controllers\\PeoplesController.cs",
+              "RelativeDocumentMoniker": "Lesson04Lab\\Controllers\\PeoplesController.cs",
+              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lesson04Lab\\Lesson04Lab\\Controllers\\PeoplesController.cs",
+              "RelativeToolTip": "Lesson04Lab\\Controllers\\PeoplesController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAADwvykAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T01:47:50.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataLocal.cs",
+              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lesson04Lab\\Lesson04Lab\\Models\\DataLocal.cs",
+              "RelativeDocumentMoniker": "Lesson04Lab\\Models\\DataLocal.cs",
+              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lesson04Lab\\Lesson04Lab\\Models\\DataLocal.cs",
+              "RelativeToolTip": "Lesson04Lab\\Models\\DataLocal.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAE8AAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T01:38:20.715Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

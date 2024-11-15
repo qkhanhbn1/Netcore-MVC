@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-2\\SS03\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{403EC401-9B5A-4016-9D34-6FA09F2AD267}|SS03\\SS03.csproj|f:\\dev2409gh-t2356\\netcoremvc\\ss02-2\\ss03\\ss03\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{403EC401-9B5A-4016-9D34-6FA09F2AD267}|SS03\\SS03.csproj|solutionrelative:ss03\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{403EC401-9B5A-4016-9D34-6FA09F2AD267}|SS03\\SS03.csproj|f:\\dev2409gh-t2356\\netcoremvc\\ss02-2\\ss03\\ss03\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{403EC401-9B5A-4016-9D34-6FA09F2AD267}|SS03\\SS03.csproj|solutionrelative:ss03\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{403EC401-9B5A-4016-9D34-6FA09F2AD267}|SS03\\SS03.csproj|f:\\dev2409gh-t2356\\netcoremvc\\ss02-2\\ss03\\ss03\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{403EC401-9B5A-4016-9D34-6FA09F2AD267}|SS03\\SS03.csproj|solutionrelative:ss03\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{403EC401-9B5A-4016-9D34-6FA09F2AD267}|SS03\\SS03.csproj|f:\\dev2409gh-t2356\\netcoremvc\\ss02-2\\ss03\\ss03\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{403EC401-9B5A-4016-9D34-6FA09F2AD267}|SS03\\SS03.csproj|solutionrelative:ss03\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{403EC401-9B5A-4016-9D34-6FA09F2AD267}|SS03\\SS03.csproj|f:\\dev2409gh-t2356\\netcoremvc\\ss02-2\\ss03\\ss03\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,11 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Product.cs",
+              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-2\\SS03\\SS03\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "SS03\\Models\\Product.cs",
+              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-2\\SS03\\SS03\\Models\\Product.cs",
+              "RelativeToolTip": "SS03\\Models\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T03:16:59.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Category.cs",
               "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-2\\SS03\\SS03\\Models\\Category.cs",
               "RelativeDocumentMoniker": "SS03\\Models\\Category.cs",
@@ -34,31 +51,30 @@
               "RelativeToolTip": "SS03\\Models\\Category.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T08:23:27.999Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T08:23:27.999Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ProductController.cs",
               "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-2\\SS03\\SS03\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "SS03\\Controllers\\ProductController.cs",
               "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-2\\SS03\\SS03\\Controllers\\ProductController.cs",
               "RelativeToolTip": "SS03\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAQwDkAAAAsAAAA",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAYwD4AAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T06:22:32.009Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-2\\SS03\\SS03\\Views\\Product\\Index.cshtml",
               "RelativeDocumentMoniker": "SS03\\Views\\Product\\Index.cshtml",
               "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-2\\SS03\\SS03\\Views\\Product\\Index.cshtml",
               "RelativeToolTip": "SS03\\Views\\Product\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA1AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-11T06:25:49.32Z",
               "EditorCaption": ""
