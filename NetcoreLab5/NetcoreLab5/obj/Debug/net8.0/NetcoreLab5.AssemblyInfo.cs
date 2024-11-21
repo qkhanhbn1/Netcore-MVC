@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NetcoreLab5")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2edc639bbb11968d914fc0163b7d355bd8ea349")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48a859d79350b2dd27c75ece057180b25c520121")]
 [assembly: System.Reflection.AssemblyProductAttribute("NetcoreLab5")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NetcoreLab5")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
