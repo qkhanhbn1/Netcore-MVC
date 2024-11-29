@@ -1,5 +1,4 @@
-﻿using Lab09.Models;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Lab09.Areas.Admins.Models
 {

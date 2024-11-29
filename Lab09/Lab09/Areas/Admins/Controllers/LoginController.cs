@@ -1,6 +1,7 @@
 ﻿using Lab09.Areas.Admins.Models;
 using Lab09.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 
 namespace Lab09.Areas.Admins.Controllers
 {
@@ -20,7 +21,7 @@ namespace Lab09.Areas.Admins.Controllers
             return View();
         }
         [HttpPost] // POST -> khi submit form
-        public IActionResult Index(Login model)
+        public IActionResult Index(Models.Login model)
         {
             if (!ModelState.IsValid)
             {

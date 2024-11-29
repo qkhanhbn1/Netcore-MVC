@@ -1,0 +1,160 @@
+﻿@model IEnumerable<Lab09.Models.Cart>
+@{
+    ViewData["Title"] = "Danh sách sản phẩm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="row cart">
+        <div class="col-md-12">
+            <h2>GIỎ HÀNG</h2>
+            <div class="box-cart">
+                <div class="box-cart-item-box">
+                    @foreach (var item in Model)
+                    {
+                        var money = item.Price * item.Quantity;
+                        <div class="box-cart-border-bottom d-flex justify-content-between align-items-center">
+
+                            <div class="box-cart-item d-flex justify-content-start align-items-center">
+
+                                <img src="@item.Image" alt="@item.Name" class="box-cart-item-img" width="100px" />
+
+                                <div class="d-flex flex-column">
+                                    <h5>@item.Name</h5>
+                                    <div class="box-cart-item-btn">
+
+                                        <button class="btn qty_btn">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
+                                        <input type="number" class="qty_input" value="@item.Quantity" />
+
+                                        <button class="btn qty_btn">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+
+                                    </div>
+                                    <p data-price="@item.Price">
+                                        Giá:
+                                    <span>@string.Format("{0:#,##0}", @item.Price)</span> VND
+                                    </p>
+                                <p data-money="@money" class="total-money">
+                                    Thành tiền:
+                                    <span id="money">@string.Format("{0:#,##0}", @money)</span> VND
+                                </p>
+                                </div>
+                            </div>
+
+                            <div class="btn-action">
+                                <a href="/carts/remove/?id=@item.Id" class="btn remove">
+                                    <i class="fa-solid fa-xmark">Xóa</i>
+                                </a>    
+
+                                <a href="/carts/?id=@item.Id" data-id="@item.Id" data- qty="@item.Quantity"
+                                   class="btn update">Cập nhật</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="box-cart-bill">
+                    <h3> Tóm tắt đơn hàng </h3>
+                <p>Tổng thành tiền: <span id="money"><span id="totalMoney">0</span></p>
+                    <p>
+                        Phí vận chuyển: <span class="ship-money">Free Ship</span><br>
+                        <small>( Miễn phí vận chuyển với đơn hàng trên 10 triệu )</small>
+                    </p>
+
+                    <p>
+                        Thông tin vận chuyển: Sản phẩm sẽ được Hoàng Hoan giao trong vòng
+
+                        2-7 ngày.
+                        Chi tiết liên hệ
+                        <a href="tel:0978611889">0978 611 889</a>
+                    </p>
+                <div class="cart-box cart-layout">
+                    <div>
+                        Tổng tiền : <span id="totalMoneyPay">0</span>
+                    </div>
+                    <div class="group-btn">
+                        <a href="/carts/orders" class="btn">Đặt hàng ngay</a>
+                        <a href="/product" class="btn">Tiếp tục mua hàng</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        // Hàm cập nhật tổng tiền giỏ hàng
+        function updateTotalMoney() {
+            let totalMoney = 0;
+
+            // Lặp qua từng sản phẩm và cộng tiền
+            $(".total-money").each(function () {
+                let itemMoney = parseFloat($(this).attr("data-money")) || 0;
+                totalMoney += itemMoney;
+            });
+
+            // Hiển thị tổng tiền
+            const formattedTotalMoney = totalMoney.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+            $("#totalMoney").text(formattedTotalMoney);       // Tổng thành tiền (phần trên)
+            $("#totalMoneyPay").text(formattedTotalMoney);   // Tổng tiền thanh toán (phần dưới)
+        }
+
+        // Sự kiện giảm số lượng
+        $('.qty_btn .fa-minus').click(function () {
+            let qty = parseInt($(this).closest('.box-cart-item-btn').find('.qty_input').val());
+            if (qty > 1) qty -= 1; // Số lượng không được nhỏ hơn 1
+            $(this).closest('.box-cart-item-btn').find('.qty_input').val(qty);
+
+            let price = parseFloat($(this).closest('.box-cart-border-bottom').find('p[data-price]').attr('data-price'));
+            let money = qty * price;
+
+            // Cập nhật thành tiền
+            $(this).closest('.box-cart-border-bottom').find('.total-money').attr("data-money", money);
+            $(this).closest('.box-cart-border-bottom').find('#money').text(money.toLocaleString('vi-VN'));
+
+            // Cập nhật tổng tiền
+            updateTotalMoney();
+        });
+
+        // Sự kiện tăng số lượng
+        $('.qty_btn .fa-plus').click(function () {
+            let qty = parseInt($(this).closest('.box-cart-item-btn').find('.qty_input').val());
+            qty += 1;
+            $(this).closest('.box-cart-item-btn').find('.qty_input').val(qty);
+
+            let price = parseFloat($(this).closest('.box-cart-border-bottom').find('p[data-price]').attr('data-price'));
+            let money = qty * price;
+
+            // Cập nhật thành tiền
+            $(this).closest('.box-cart-border-bottom').find('.total-money').attr("data-money", money);
+            $(this).closest('.box-cart-border-bottom').find('#money').text(money.toLocaleString('vi-VN'));
+
+            // Cập nhật tổng tiền
+            updateTotalMoney();
+        });
+
+        // Sự kiện khi thay đổi số lượng trực tiếp
+        $('.qty_input').change(function () {
+            let qty = parseInt($(this).val());
+            if (isNaN(qty) || qty < 1) qty = 1; // Đảm bảo số lượng tối thiểu là 1
+            $(this).val(qty);
+
+            let price = parseFloat($(this).closest('.box-cart-border-bottom').find('p[data-price]').attr('data-price'));
+            let money = qty * price;
+
+            // Cập nhật thành tiền
+            $(this).closest('.box-cart-border-bottom').find('.total-money').attr("data-money", money);
+            $(this).closest('.box-cart-border-bottom').find('#money').text(money.toLocaleString('vi-VN'));
+
+            // Cập nhật tổng tiền
+            updateTotalMoney();
+        });
+
+        // Khởi tạo tổng tiền giỏ hàng
+        updateTotalMoney();
+    });
+
+
+    </script>
