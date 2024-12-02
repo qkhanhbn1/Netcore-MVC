@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab10\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F6502161-BAA9-40C3-AD9E-6B44C80E2FFE}|Lab10\\Lab10.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab10\\lab10\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F6502161-BAA9-40C3-AD9E-6B44C80E2FFE}|Lab10\\Lab10.csproj|solutionrelative:lab10\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F6502161-BAA9-40C3-AD9E-6B44C80E2FFE}|Lab10\\Lab10.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab10\\lab10\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F6502161-BAA9-40C3-AD9E-6B44C80E2FFE}|Lab10\\Lab10.csproj|solutionrelative:lab10\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6502161-BAA9-40C3-AD9E-6B44C80E2FFE}|Lab10\\Lab10.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab10\\lab10\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F6502161-BAA9-40C3-AD9E-6B44C80E2FFE}|Lab10\\Lab10.csproj|solutionrelative:lab10\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6502161-BAA9-40C3-AD9E-6B44C80E2FFE}|Lab10\\Lab10.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab10\\lab10\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F6502161-BAA9-40C3-AD9E-6B44C80E2FFE}|Lab10\\Lab10.csproj|solutionrelative:lab10\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6502161-BAA9-40C3-AD9E-6B44C80E2FFE}|Lab10\\Lab10.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab10\\lab10\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -30,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab10\\Lab10\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "Lab10\\Views\\Home\\Privacy.cshtml",
@@ -42,12 +42,11 @@
               "RelativeToolTip": "Lab10\\Views\\Home\\Privacy.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-28T08:11:56.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T08:11:56.657Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab10\\Lab10\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Lab10\\Views\\Shared\\_Layout.cshtml",
@@ -55,12 +54,11 @@
               "RelativeToolTip": "Lab10\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAABsAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-28T08:11:50.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T08:11:50.978Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab10\\Lab10\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "Lab10\\Views\\Shared\\_LoginPartial.cshtml",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "Lab10\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABrAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T07:49:00.72Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T07:49:00.72Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "Lab10\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAACNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-28T07:41:58.978Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T07:41:58.978Z"
             }
           ]
         }

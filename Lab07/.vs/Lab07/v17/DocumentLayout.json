@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab07\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D2D65FBD-8DA8-40CF-991E-61C4C7C6792C}|Lab07\\Lab07.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab07\\lab07\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2D65FBD-8DA8-40CF-991E-61C4C7C6792C}|Lab07\\Lab07.csproj|solutionrelative:lab07\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2D65FBD-8DA8-40CF-991E-61C4C7C6792C}|Lab07\\Lab07.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab07\\lab07\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2D65FBD-8DA8-40CF-991E-61C4C7C6792C}|Lab07\\Lab07.csproj|solutionrelative:lab07\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2D65FBD-8DA8-40CF-991E-61C4C7C6792C}|Lab07\\Lab07.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab07\\lab07\\models\\productmanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2D65FBD-8DA8-40CF-991E-61C4C7C6792C}|Lab07\\Lab07.csproj|solutionrelative:lab07\\models\\productmanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2D65FBD-8DA8-40CF-991E-61C4C7C6792C}|Lab07\\Lab07.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab07\\lab07\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2D65FBD-8DA8-40CF-991E-61C4C7C6792C}|Lab07\\Lab07.csproj|solutionrelative:lab07\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D2D65FBD-8DA8-40CF-991E-61C4C7C6792C}|Lab07\\Lab07.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab07\\lab07\\areas\\admin\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2D65FBD-8DA8-40CF-991E-61C4C7C6792C}|Lab07\\Lab07.csproj|solutionrelative:lab07\\areas\\admin\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2D65FBD-8DA8-40CF-991E-61C4C7C6792C}|Lab07\\Lab07.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab07\\lab07\\areas\\admin\\controllers\\bannerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2D65FBD-8DA8-40CF-991E-61C4C7C6792C}|Lab07\\Lab07.csproj|solutionrelative:lab07\\areas\\admin\\controllers\\bannerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2D65FBD-8DA8-40CF-991E-61C4C7C6792C}|Lab07\\Lab07.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab07\\lab07\\areas\\admin\\controllers\\blogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2D65FBD-8DA8-40CF-991E-61C4C7C6792C}|Lab07\\Lab07.csproj|solutionrelative:lab07\\areas\\admin\\controllers\\blogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2D65FBD-8DA8-40CF-991E-61C4C7C6792C}|Lab07\\Lab07.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab07\\lab07\\areas\\admin\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D2D65FBD-8DA8-40CF-991E-61C4C7C6792C}|Lab07\\Lab07.csproj|solutionrelative:lab07\\areas\\admin\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2D65FBD-8DA8-40CF-991E-61C4C7C6792C}|Lab07\\Lab07.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab07\\lab07\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2D65FBD-8DA8-40CF-991E-61C4C7C6792C}|Lab07\\Lab07.csproj|solutionrelative:lab07\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,75 +27,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Product.cs",
-              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab07\\Lab07\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "Lab07\\Models\\Product.cs",
-              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab07\\Lab07\\Models\\Product.cs",
-              "RelativeToolTip": "Lab07\\Models\\Product.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T04:13:59.979Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductManagementContext.cs",
-              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab07\\Lab07\\Models\\ProductManagementContext.cs",
-              "RelativeDocumentMoniker": "Lab07\\Models\\ProductManagementContext.cs",
-              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab07\\Lab07\\Models\\ProductManagementContext.cs",
-              "RelativeToolTip": "Lab07\\Models\\ProductManagementContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T04:10:34.306Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab07\\Lab07\\Program.cs",
               "RelativeDocumentMoniker": "Lab07\\Program.cs",
               "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab07\\Lab07\\Program.cs",
               "RelativeToolTip": "Lab07\\Program.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "ViewState": "AQIAACIAAAAAAAAAAAAQwC0AAABWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T04:10:03.389Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_SideBar.cshtml",
-              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab07\\Lab07\\Areas\\Admin\\Views\\Shared\\_SideBar.cshtml",
-              "RelativeDocumentMoniker": "Lab07\\Areas\\Admin\\Views\\Shared\\_SideBar.cshtml",
-              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab07\\Lab07\\Areas\\Admin\\Views\\Shared\\_SideBar.cshtml",
-              "RelativeToolTip": "Lab07\\Areas\\Admin\\Views\\Shared\\_SideBar.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACQAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-18T03:56:58.928Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BlogsController.cs",
-              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab07\\Lab07\\Areas\\Admin\\Controllers\\BlogsController.cs",
-              "RelativeDocumentMoniker": "Lab07\\Areas\\Admin\\Controllers\\BlogsController.cs",
-              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab07\\Lab07\\Areas\\Admin\\Controllers\\BlogsController.cs",
-              "RelativeToolTip": "Lab07\\Areas\\Admin\\Controllers\\BlogsController.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T03:56:44.838Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BannersController.cs",
-              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab07\\Lab07\\Areas\\Admin\\Controllers\\BannersController.cs",
-              "RelativeDocumentMoniker": "Lab07\\Areas\\Admin\\Controllers\\BannersController.cs",
-              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab07\\Lab07\\Areas\\Admin\\Controllers\\BannersController.cs",
-              "RelativeToolTip": "Lab07\\Areas\\Admin\\Controllers\\BannersController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T03:56:01.034Z"
+              "WhenOpened": "2024-12-02T06:54:17.664Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -123,7 +47,21 @@
               "RelativeToolTip": "Lab07\\Areas\\Admin\\Controllers\\ProductsController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T03:55:22.836Z"
+              "WhenOpened": "2024-12-02T06:52:02.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab07\\Lab07\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Lab07\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab07\\Lab07\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Lab07\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T06:51:57.824Z",
+              "EditorCaption": ""
             }
           ]
         }

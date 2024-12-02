@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\dev2409gh-t2356\\C#\\SS01MVC\\SS01MVC\\SS01MVC\\SS01MVC.csproj",
+      "projectUniqueName": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS01MVC\\SS01MVC\\SS01MVC\\SS01MVC.csproj",
       "projectName": "SS01MVC",
-      "projectPath": "F:\\dev2409gh-t2356\\C#\\SS01MVC\\SS01MVC\\SS01MVC\\SS01MVC.csproj",
+      "projectPath": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS01MVC\\SS01MVC\\SS01MVC\\SS01MVC.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "F:\\dev2409gh-t2356\\C#\\SS01MVC\\SS01MVC\\SS01MVC\\obj\\",
+      "outputPath": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS01MVC\\SS01MVC\\SS01MVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -5571,11 +5571,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\dev2409gh-t2356\\C#\\SS02\\SS02\\SS02\\SS02.csproj",
+      "projectUniqueName": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-1\\SS02\\SS02\\SS02.csproj",
       "projectName": "SS02",
-      "projectPath": "F:\\dev2409gh-t2356\\C#\\SS02\\SS02\\SS02\\SS02.csproj",
+      "projectPath": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-1\\SS02\\SS02\\SS02.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "F:\\dev2409gh-t2356\\C#\\SS02\\SS02\\SS02\\obj\\",
+      "outputPath": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-1\\SS02\\SS02\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",

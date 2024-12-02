@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5EU4Q2MdGlY=",
+  "dgSpecHash": "XI4lTHiC54M=",
   "success": true,
-  "projectFilePath": "F:\\dev2409gh-t2356\\C#\\SS02\\SS02\\SS02\\SS02.csproj",
+  "projectFilePath": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-1\\SS02\\SS02\\SS02.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

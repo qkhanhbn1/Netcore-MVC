@@ -1,17 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\dev2409gh-t2356\\C#\\SS02\\SS02\\",
+  "WorkspaceRootPath": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-1\\SS02\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{52D3CE2C-3983-449B-8598-78FA3315430D}|SS02\\SS02.csproj|f:\\dev2409gh-t2356\\c#\\ss02\\ss02\\ss02\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{52D3CE2C-3983-449B-8598-78FA3315430D}|SS02\\SS02.csproj|f:\\dev2409gh-t2356\\netcoremvc\\ss02-1\\ss02\\ss02\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{52D3CE2C-3983-449B-8598-78FA3315430D}|SS02\\SS02.csproj|solutionrelative:ss02\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52D3CE2C-3983-449B-8598-78FA3315430D}|SS02\\SS02.csproj|f:\\dev2409gh-t2356\\netcoremvc\\ss02-1\\ss02\\ss02\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{52D3CE2C-3983-449B-8598-78FA3315430D}|SS02\\SS02.csproj|solutionrelative:ss02\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52D3CE2C-3983-449B-8598-78FA3315430D}|SS02\\SS02.csproj|f:\\dev2409gh-t2356\\c#\\ss02\\ss02\\ss02\\views\\product\\getproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{52D3CE2C-3983-449B-8598-78FA3315430D}|SS02\\SS02.csproj|f:\\dev2409gh-t2356\\netcoremvc\\ss02-1\\ss02\\ss02\\views\\product\\getproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{52D3CE2C-3983-449B-8598-78FA3315430D}|SS02\\SS02.csproj|solutionrelative:ss02\\views\\product\\getproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52D3CE2C-3983-449B-8598-78FA3315430D}|SS02\\SS02.csproj|f:\\dev2409gh-t2356\\c#\\ss02\\ss02\\ss02\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{52D3CE2C-3983-449B-8598-78FA3315430D}|SS02\\SS02.csproj|f:\\dev2409gh-t2356\\netcoremvc\\ss02-1\\ss02\\ss02\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52D3CE2C-3983-449B-8598-78FA3315430D}|SS02\\SS02.csproj|solutionrelative:ss02\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -27,41 +31,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-1\\SS02\\SS02\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "SS02\\Views\\Home\\Index.cshtml",
+              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-1\\SS02\\SS02\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "SS02\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-02T14:03:58.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "F:\\dev2409gh-t2356\\C#\\SS02\\SS02\\SS02\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-1\\SS02\\SS02\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "SS02\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "F:\\dev2409gh-t2356\\C#\\SS02\\SS02\\SS02\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-1\\SS02\\SS02\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "SS02\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACIAAAAWAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACIAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-11T02:47:35.856Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GetProducts.cshtml",
-              "DocumentMoniker": "F:\\dev2409gh-t2356\\C#\\SS02\\SS02\\SS02\\Views\\Product\\GetProducts.cshtml",
+              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-1\\SS02\\SS02\\Views\\Product\\GetProducts.cshtml",
               "RelativeDocumentMoniker": "SS02\\Views\\Product\\GetProducts.cshtml",
-              "ToolTip": "F:\\dev2409gh-t2356\\C#\\SS02\\SS02\\SS02\\Views\\Product\\GetProducts.cshtml",
+              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-1\\SS02\\SS02\\Views\\Product\\GetProducts.cshtml",
               "RelativeToolTip": "SS02\\Views\\Product\\GetProducts.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-11T02:38:52.142Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T02:38:52.142Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ProductController.cs",
-              "DocumentMoniker": "F:\\dev2409gh-t2356\\C#\\SS02\\SS02\\SS02\\Controllers\\ProductController.cs",
+              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-1\\SS02\\SS02\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "SS02\\Controllers\\ProductController.cs",
-              "ToolTip": "F:\\dev2409gh-t2356\\C#\\SS02\\SS02\\SS02\\Controllers\\ProductController.cs",
+              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\SS02-1\\SS02\\SS02\\Controllers\\ProductController.cs",
               "RelativeToolTip": "SS02\\Controllers\\ProductController.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAxwBAAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T02:13:49.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T02:13:49.809Z"
             }
           ]
         }
