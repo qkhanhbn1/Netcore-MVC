@@ -23,14 +23,13 @@ namespace Lab09
             ///dăng kí dịch vụ cho 
             builder.Services.AddHttpContextAccessor();
 
+            builder.Services.AddDistributedMemoryCache();
             builder.Services.AddSession(options =>
             {
-                options.IdleTimeout = TimeSpan.FromMinutes(60);
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
-                options.Cookie.Name = ".Devmaster.Session";
             });
-
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

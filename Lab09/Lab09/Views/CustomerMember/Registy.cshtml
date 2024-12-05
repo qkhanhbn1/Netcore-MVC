@@ -1,7 +1,53 @@
 ﻿@{
-    ViewData["Title"] = "Registy Success";
+    ViewData["Title"] = "Registration";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<style>
+    form {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: #f9f9f9;
+        padding: 1rem;
+    }
+</style>
+
 <div class="row">
-    <h2 class="text-center my-2 py-2">Đăng ký thành công. đăng nhập để tiếp tục...</h2>
+    <h2 class="text-center my-2 py-2">REGISTRATION INFORMATION</h2>
+
+    @if (TempData["successRegisty"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["successRegisty"]
+        </div>
+    }
+
+    @if (TempData["errorRegisty"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["errorRegisty"]
+        </div>
+    }
+
+    <div class="col-md-6">
+        <form asp-action="Registy" asp-controller="CustomerMember" method="post">
+            <div class="mb-3">
+                <label for="Name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="Name" name="Name" placeholder="FullName..." required />
+            </div>
+            <div class="mb-3">
+                <label for="USERNAME" class="form-label">UserName</label>
+                <input type="text" class="form-control" id="USERNAME" name="Username" placeholder="UserName..." required />
+            </div>
+            <div class="mb-3">
+                <label for="EMAIL" class="form-label">Email</label>
+                <input type="email" class="form-control" id="EMAIL" name="Email" placeholder="name@example.com" required />
+            </div>
+            <div class="mb-3">
+                <label for="PASSWORD" class="form-label">Password</label>
+                <input type="password" class="form-control" id="PASSWORD" name="Password" required />
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Register</button>
+        </form>
+    </div>
 </div>

@@ -35,14 +35,14 @@ namespace Lab09.Controllers
                 if (!ModelState.IsValid)
                 {
                     TempData["errorRegisty"] = "Dữ liệu đầu vào không hợp lệ.";
-                    return View(model);  // Quay lại view với thông báo lỗi
+                    return View(model);
                 }
 
                 // Kiểm tra trùng lặp email hoặc username
                 if (_context.Customers.Any(c => c.Email == model.Email || c.Username == model.Username))
                 {
                     TempData["errorRegisty"] = "Email hoặc Tên đăng nhập đã tồn tại.";
-                    return View(model);  // Quay lại view với thông báo lỗi
+                    return View(model);
                 }
 
                 // Tiến hành mã hóa mật khẩu
@@ -56,25 +56,33 @@ namespace Lab09.Controllers
 
                 // Lưu thông tin vào cơ sở dữ liệu
                 _context.Add(model);
-                int result = _context.SaveChanges();  // Kiểm tra kết quả trả về
+                int result = _context.SaveChanges();
+
+                // Kiểm tra kết quả
                 if (result > 0)
                 {
-                    TempData["successRegisty"] = "Đăng ký thành công!";
-                    return RedirectToAction("Index");
+                    TempData["successRegisty"] = "Đăng ký thành công! Đăng nhập để tiếp tục.";
+                    return RedirectToAction("Registy");
                 }
                 else
                 {
-                    TempData["errorRegisty"] = "Đã xảy ra lỗi trong quá trình lưu dữ liệu.";
+                    TempData["errorRegisty"] = "Không thể lưu dữ liệu vào cơ sở dữ liệu.";
                     return View(model);
                 }
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi và trả về thông báo lỗi
+                // Hiển thị inner exception
                 TempData["errorRegisty"] = "Lỗi đăng ký: " + ex.Message;
-                return View(model);  // Quay lại view với thông báo lỗi
+                if (ex.InnerException != null)
+                {
+                    TempData["errorRegisty"] += " - Inner Exception: " + ex.InnerException.Message;
+                }
+                return View(model);
             }
         }
+
+
 
         [HttpPost]
 
