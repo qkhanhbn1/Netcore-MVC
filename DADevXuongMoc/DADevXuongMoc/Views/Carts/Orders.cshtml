@@ -1,0 +1,113 @@
+﻿@model IEnumerable<DADevXuongMoc.Models.Cart>
+@{
+    ViewData["Title"] = "Thông tin đơn hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var customer = ViewBag.Customer as DADevXuongMoc.Models.Customer;
+}
+@if (ViewBag.Customer == null)
+    @if (ViewBag.OrderSuccessMessage != null)
+    {
+        <div class="alert alert-success">
+            @ViewBag.OrderSuccessMessage
+        </div>
+    }
+<style>
+    .input-group-text {
+        width: 100px !important;
+    }
+</style>
+
+<form asp-action="OrderPay" asp-controller="Carts" method="post">
+    <div class="row cart py-2">
+        <h2 class="text-center my-2 py-2">ĐƠN HÀNG CỦA BẠN</h2>
+
+        <!-- Thông tin người đặt hàng -->
+        <div class="col-md-6">
+            <div class="border p-2">
+                <h2>Thông tin người đặt hàng</h2>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Name</span>
+                    <input type="text" class="form-control" readonly value="@customer.Name" />
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Email</span>
+                    <input type="text" class="form-control" readonly value="@customer.Email" />
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Phone</span>
+                    <input type="text" class="form-control" readonly value="@customer.Phone" />
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Address</span>
+                    <input type="text" class="form-control" readonly value="@customer.Address" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Thông tin người nhận hàng -->
+        <div class="col-md-6">
+            <div class="border p-2">
+                <h2>Thông tin người nhận hàng</h2>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Name</span>
+                    <input type="text" class="form-control" name="NameReciver" value="@customer.Name" />
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Email</span>
+                    <input type="text" class="form-control" name="EmailReciver" value="@customer.Email" />
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Phone</span>
+                    <input type="text" class="form-control" name="PhoneReciver" value="@customer.Phone" />
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Address</span>
+                    <textarea class="form-control" name="AddressReciver">@customer.Address</textarea>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Note</span>
+                    <textarea class="form-control" name="Notes"></textarea>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Payment</span>
+                    <select class="form-control" name="IdPayment" asp-items="ViewBag.IdPayment"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row cart cart">
+        <div class="col-md-12">
+            <h2 class="text-center my-4 py-2">THÔNG TIN SẢN PHẨM ĐẶT MUA</h2>
+            <div class="box-cart">
+                <div class="box-cart-item-box">
+                    @foreach (var item in Model)
+                    {
+                        var money = item.Price * item.Quantity;
+                        <div class="box-cart-border-bottom d-flex justify-content-between align-items-center mb-3">
+                            <div class="box-cart-item d-flex justify-content-start align-items-center">
+                                <img src="@item.Image" alt="@item.Name" class="box-cart-items-img" style="width:80px; height: 80px; object-fit: cover; border-radius: 8px;" />
+                                <div class="d-flex flex-column ms-3">
+                                    <h5 class="fw-bold">@item.Name</h5>
+                                    <p class="text-muted">Số lượng: @item.Quantity</p>
+                                    <p>Giá: <span class="fw-bold text-danger">@string.Format("{0:#,##0}", item.Price)</span> VND</p>
+                                    <p>Thành tiền: <span class="fw-bold text-success">@string.Format("{0:#,##0}", money)</span> VND</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-end my-3">
+        <h4>Tổng tiền: <span id="totalMoneyPay" class="fw-bold text-primary">@string.Format("{0:#,##0}", ViewBag.total)</span> VND</h4>
+    </div>
+
+    <div class="text-center py-3">
+        <button type="submit" class="btn btn-primary">Xác nhận đặt hàng</button>
+    </div>
+</form>

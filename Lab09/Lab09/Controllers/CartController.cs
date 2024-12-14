@@ -1,4 +1,5 @@
-﻿using Lab09.Models;
+﻿using DADevXuongMoc.Models_;
+using Lab09.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -26,8 +27,14 @@ namespace Lab09.Controllers
             base.OnActionExecuting(context);
         }
         // GET: CartController
-        public ActionResult Index()
+        public IActionResult Index()
         {
+            float total = 0;
+            foreach (var item in carts)
+            {
+                total += item.Quantity * item.Price;
+            }
+            ViewBag.total = total;
             return View(carts);
         }
 

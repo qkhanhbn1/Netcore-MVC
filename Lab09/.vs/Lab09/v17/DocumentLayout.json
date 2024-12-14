@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab09\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{427D0F7B-E7D4-4174-8177-0251810EC00F}|Lab09\\Lab09.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab09\\lab09\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{427D0F7B-E7D4-4174-8177-0251810EC00F}|Lab09\\Lab09.csproj|solutionrelative:lab09\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{427D0F7B-E7D4-4174-8177-0251810EC00F}|Lab09\\Lab09.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab09\\lab09\\models\u200B\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{427D0F7B-E7D4-4174-8177-0251810EC00F}|Lab09\\Lab09.csproj|solutionrelative:lab09\\models\u200B\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{427D0F7B-E7D4-4174-8177-0251810EC00F}|Lab09\\Lab09.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab09\\lab09\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{427D0F7B-E7D4-4174-8177-0251810EC00F}|Lab09\\Lab09.csproj|solutionrelative:lab09\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{427D0F7B-E7D4-4174-8177-0251810EC00F}|Lab09\\Lab09.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab09\\lab09\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{427D0F7B-E7D4-4174-8177-0251810EC00F}|Lab09\\Lab09.csproj|solutionrelative:lab09\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{427D0F7B-E7D4-4174-8177-0251810EC00F}|Lab09\\Lab09.csproj|f:\\dev2409gh-t2356\\netcoremvc\\lab09\\lab09\\wwwroot\\css\\font.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{427D0F7B-E7D4-4174-8177-0251810EC00F}|Lab09\\Lab09.csproj|solutionrelative:lab09\\wwwroot\\css\\font.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab09\\Lab09\\Models\u200B\\Cart.cs",
+              "RelativeDocumentMoniker": "Lab09\\Models\u200B\\Cart.cs",
+              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab09\\Lab09\\Models\u200B\\Cart.cs",
+              "RelativeToolTip": "Lab09\\Models\u200B\\Cart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T02:47:21.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab09\\Lab09\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "Lab09\\Controllers\\CartController.cs",
+              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab09\\Lab09\\Controllers\\CartController.cs",
+              "RelativeToolTip": "Lab09\\Controllers\\CartController.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAUwCYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T02:35:30.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab09\\Lab09\\Views\\Product\\Index.cshtml",
               "RelativeDocumentMoniker": "Lab09\\Views\\Product\\Index.cshtml",
               "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab09\\Lab09\\Views\\Product\\Index.cshtml",
               "RelativeToolTip": "Lab09\\Views\\Product\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAGAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-04T08:17:14.72Z",
+              "WhenOpened": "2024-12-09T02:33:07.015Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ProductController.cs",
               "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab09\\Lab09\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Lab09\\Controllers\\ProductController.cs",
               "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab09\\Lab09\\Controllers\\ProductController.cs",
               "RelativeToolTip": "Lab09\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAuAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T08:16:00.877Z",
+              "WhenOpened": "2024-12-09T02:32:33.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "font.css",
+              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab09\\Lab09\\wwwroot\\css\\font.css",
+              "RelativeDocumentMoniker": "Lab09\\wwwroot\\css\\font.css",
+              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\Lab09\\Lab09\\wwwroot\\css\\font.css",
+              "RelativeToolTip": "Lab09\\wwwroot\\css\\font.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-09T02:29:51.708Z",
               "EditorCaption": ""
             }
           ]

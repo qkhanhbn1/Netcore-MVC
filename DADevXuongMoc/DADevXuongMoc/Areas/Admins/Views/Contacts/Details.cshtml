@@ -1,0 +1,70 @@
+﻿@model DADevXuongMoc.Models.Contact
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admins/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1 class="text-primary mb-4">Chi tiết Liên Hệ</h1>
+
+<div class="card">
+    <div class="card-body">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th class="text-end" style="width: 30%;">@Html.DisplayNameFor(model => model.Title)</th>
+                    <td>@Html.DisplayFor(model => model.Title)</td>
+                </tr>
+                <tr>
+                    <th class="text-end">@Html.DisplayNameFor(model => model.Email)</th>
+                    <td>@Html.DisplayFor(model => model.Email)</td>
+                </tr>
+                <tr>
+                    <th class="text-end">@Html.DisplayNameFor(model => model.Phone)</th>
+                    <td>@Html.DisplayFor(model => model.Phone)</td>
+                </tr>
+                <tr>
+                    <th class="text-end">@Html.DisplayNameFor(model => model.Address)</th>
+                    <td>@Html.DisplayFor(model => model.Address)</td>
+                </tr>
+                <tr>
+                    <th class="text-end">@Html.DisplayNameFor(model => model.Content)</th>
+                    <td>@Html.DisplayFor(model => model.Content)</td>
+                </tr>
+                <tr>
+                    <th class="text-end">@Html.DisplayNameFor(model => model.CreatedDate)</th>
+                    <td>@Html.DisplayFor(model => model.CreatedDate)</td>
+                </tr>
+                <tr>
+                    <th class="text-end">@Html.DisplayNameFor(model => model.UpdatedDate)</th>
+                    <td>@Html.DisplayFor(model => model.UpdatedDate)</td>
+                </tr>
+                <tr>
+                    <th class="text-end">@Html.DisplayNameFor(model => model.AdminCreated)</th>
+                    <td>@Html.DisplayFor(model => model.AdminCreated)</td>
+                </tr>
+                <tr>
+                    <th class="text-end">@Html.DisplayNameFor(model => model.AdminUpdated)</th>
+                    <td>@Html.DisplayFor(model => model.AdminUpdated)</td>
+                </tr>
+                <tr>
+                    <th class="text-end">@Html.DisplayNameFor(model => model.Status)</th>
+                    <td>@Html.DisplayFor(model => model.Status)</td>
+                </tr>
+                <tr>
+                    <th class="text-end">@Html.DisplayNameFor(model => model.Isdelete)</th>
+                    <td>@Html.DisplayFor(model => model.Isdelete)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="mt-4">
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary me-2">
+        <i class="bi bi-pencil"></i> Edit
+    </a>
+    <a asp-action="Index" class="btn btn-danger">
+        <i class="bi bi-arrow-left"></i> Back to List
+    </a>
+</div>

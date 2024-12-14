@@ -1,0 +1,33 @@
+﻿@model DADevXuongMoc.Models.Customer
+
+@{
+    ViewData["Title"] = "Login Information";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="border p-3">
+    <h2>Login</h2>
+    <form asp-action="Login" method="post">
+        <!-- Truyền URL trước đó thông qua input hidden -->
+        <input type="hidden" name="url" value="@ViewContext.HttpContext.Request.Query["url"]" />
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" asp-for="Email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" asp-for="Password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+</div>
