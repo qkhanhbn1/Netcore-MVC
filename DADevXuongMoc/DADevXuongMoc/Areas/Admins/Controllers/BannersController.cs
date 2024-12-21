@@ -68,13 +68,29 @@ namespace DADevXuongMoc.Areas.Admins.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Image,Title,SubTitle,Urls,Orders,Type,CreatedDate,UpdatedDate,AdminCreated,AdminUpdated,Notes,Status,Isdelete")] Banner banner)
         {
-            if (ModelState.IsValid)
+            try
             {
+                var files = HttpContext.Request.Form.Files;
+                if (files.Count() > 0 && files[0].Length > 0)
+                {
+                    var file = files[0];
+                    var FileName = file.FileName;
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\Images\\anhcat", FileName);
+                    using (var stream = new FileStream(path, FileMode.Create))
+                    {
+                        file.CopyTo(stream);
+                        banner.Image = "/Images/anhcat" + FileName;
+                    }
+                }
                 _context.Add(banner);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(banner);
+            catch (Exception ex)
+            {
+                ViewBag.error = ex.Message;
+                return View(banner);
+            }
         }
 
         // GET: Admins/Banners/Edit/5

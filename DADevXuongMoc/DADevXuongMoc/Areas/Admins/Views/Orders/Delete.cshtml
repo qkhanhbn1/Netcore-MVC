@@ -1,0 +1,92 @@
+﻿@model DADevXuongMoc.Models.Order
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Areas/Admins/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-header bg-danger text-white text-center">
+            <h4>Xác nhận xóa đơn hàng?</h4>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">
+                    <strong>Mã đơn hàng</strong>
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Idorders)
+                </dd>
+
+                <dt class="col-sm-3">
+                    Ngày tạo đơn
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.OrdersDate)
+                </dd>
+
+                <dt class="col-sm-3">
+                    Tổng tiền
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.TotalMoney)
+                </dd>
+
+                <dt class="col-sm-3">
+                    Tên người dùng
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.NameReciver)
+                </dd>
+
+                <dt class="col-sm-3">
+                    Địa chỉ
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Address)
+                </dd>
+
+                <dt class="col-sm-3">
+                    <strong>@Html.DisplayNameFor(model => model.Email)</strong>
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt class="col-sm-3">
+                    Số điện thoại
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Phone)
+                </dd>
+
+                <dt class="col-sm-3">
+                    Trạng thái
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Isactive)
+                </dd>
+
+                <dt class="col-sm-3">
+                    <strong>Id khách hàng</strong>
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.IdcustomerNavigation.Id)
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="mt-3 text-center">
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-danger">
+                <i class="bi bi-trash"></i> Xóa
+            </button>
+            <a asp-action="Index" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Quay lại danh sách
+            </a>
+        </form>
+    </div>
+</div>
+

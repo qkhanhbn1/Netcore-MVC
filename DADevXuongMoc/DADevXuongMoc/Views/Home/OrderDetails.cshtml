@@ -1,0 +1,55 @@
+﻿@model List<DADevXuongMoc.Models.OrdersDetail>
+
+<h2 style="margin-top:8rem;margin-left:13rem">Chi tiết đơn hàng</h2>
+
+<div class="container">
+    @foreach (var detail in Model)
+    {
+        <div class="card mb-3">
+            <div class="card-header">
+                <h5>Chi tiết sản phẩm @detail.IdproductNavigation?.Title</h5>
+            </div>
+            <div class="card-body">
+                <div class="row mb-2">
+                    <div class="col-md-4"><strong>Ảnh sản phẩm:</strong></div>
+                    <div class="col-md-8">
+                        <!-- Kiểm tra xem sản phẩm có ảnh không -->
+                        @if (detail.IdproductNavigation?.Image != null)
+                        {
+                            <img src="@detail.IdproductNavigation?.Image" alt="Image of @detail.IdproductNavigation?.Title" style="width: 100px; height: 100px; object-fit: cover;" />
+                        }
+                        else
+                        {
+                            <span>Không có ảnh</span>
+                        }
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-4"><strong>Tên sản phẩm:</strong></div>
+                    <div class="col-md-8">@detail.IdproductNavigation?.Title</div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-4"><strong>Số lượng:</strong></div>
+                    <div class="col-md-8">@detail.Qty</div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-4"><strong>Đơn giá:</strong></div>
+                    <div class="col-md-8">@detail.Price?.ToString("C")</div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-4"><strong>Thành tiền:</strong></div>
+                    <div class="col-md-8">@detail.Total?.ToString("C")</div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-4"><strong>Số lượng trả lại:</strong></div>
+                    <div class="col-md-8">@detail.ReturnQty</div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Nút quay lại danh sách đơn hàng -->
+<a asp-action="Orders" class="btn btn-secondary mt-3" style="margin-top:8rem;margin-left:13rem">Quay lại danh sách đơn hàng</a>
+<br />
+<br />

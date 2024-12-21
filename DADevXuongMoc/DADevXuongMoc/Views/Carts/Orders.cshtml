@@ -27,22 +27,23 @@
                 <h2>Thông tin người đặt hàng</h2>
                 <div class="input-group mb-3">
                     <span class="input-group-text">Name</span>
-                    <input type="text" class="form-control" readonly value="@customer.Name" />
+                    <input type="text" class="form-control" name="NameReciver" readonly value="@customer.Name" />
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text">Email</span>
-                    <input type="text" class="form-control" readonly value="@customer.Email" />
+                    <input type="text" class="form-control" name="Email" readonly value="@customer.Email" />
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text">Phone</span>
-                    <input type="text" class="form-control" readonly value="@customer.Phone" />
+                    <input type="text" class="form-control" name="Phone" readonly value="@customer.Phone" />
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text">Address</span>
-                    <input type="text" class="form-control" readonly value="@customer.Address" />
+                    <input type="text" class="form-control" name="Address" readonly value="@customer.Address" />
                 </div>
             </div>
         </div>
+
 
         <!-- Thông tin người nhận hàng -->
         <div class="col-md-6">
@@ -50,7 +51,7 @@
                 <h2>Thông tin người nhận hàng</h2>
                 <div class="input-group mb-3">
                     <span class="input-group-text">Name</span>
-                    <input type="text" class="form-control" name="NameReciver" value="@customer.Name" />
+                    <input type="text" class="form-control" name="Name" value="@customer.Name" />
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text">Email</span>
@@ -58,11 +59,11 @@
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text">Phone</span>
-                    <input type="text" class="form-control" name="PhoneReciver" value="@customer.Phone" />
+                    <input type="text" class="form-control" name="Phone" value="@customer.Phone" />
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text">Address</span>
-                    <textarea class="form-control" name="AddressReciver">@customer.Address</textarea>
+                    <input type="text" class="form-control" name="Address" value="@customer.Address" />
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text">Note</span>
@@ -70,7 +71,9 @@
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text">Payment</span>
-                    <select class="form-control" name="IdPayment" asp-items="ViewBag.IdPayment"></select>
+                    <select class="form-control" name="Idpayment">
+                        <option value="0">Thanh toán khi nhận hàng</option>
+                    </select>
                 </div>
             </div>
         </div>

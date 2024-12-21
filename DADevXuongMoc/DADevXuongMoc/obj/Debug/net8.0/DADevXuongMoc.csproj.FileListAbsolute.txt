@@ -272,3 +272,4 @@ F:\dev2409gh-t2356\NetCoreMVC\DADevXuongMoc\DADevXuongMoc\bin\Debug\net8.0\Micro
 F:\dev2409gh-t2356\NetCoreMVC\DADevXuongMoc\DADevXuongMoc\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
 F:\dev2409gh-t2356\NetCoreMVC\DADevXuongMoc\DADevXuongMoc\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 F:\dev2409gh-t2356\NetCoreMVC\DADevXuongMoc\DADevXuongMoc\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+F:\dev2409gh-t2356\NetCoreMVC\DADevXuongMoc\DADevXuongMoc\bin\Debug\net8.0\DADevXuongMoc.dll.config

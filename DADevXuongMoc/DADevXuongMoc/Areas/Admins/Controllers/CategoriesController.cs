@@ -126,8 +126,21 @@ namespace DADevXuongMoc.Areas.Admins.Controllers
             {
                 try
                 {
+                    var files = HttpContext.Request.Form.Files;
+                    if (files.Count() > 0 && files[0].Length > 0)
+                    {
+                        var file = files[0];
+                        var FileName = file.FileName;
+                        var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\Images\\products", FileName);
+                        using (var stream = new FileStream(path, FileMode.Create))
+                        {
+                            file.CopyTo(stream);
+                            category.Icon = "/Images/products/" + FileName;
+                        }
+                    }
                     _context.Update(category);
                     await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -137,11 +150,21 @@ namespace DADevXuongMoc.Areas.Admins.Controllers
                     }
                     else
                     {
-                        throw;
+                        return View(category);
                     }
                 }
-                return RedirectToAction(nameof(Index));
             }
+            // Đưa ra lỗi của modelState để bạn có thể debug
+            var errorMessages = ModelState.Values.SelectMany(v => v.Errors)
+                                                  .Select(e => e.ErrorMessage)
+                                                  .ToList();
+            // Xem danh sách lỗi trong debug console hoặc log
+            foreach (var errorMessage in errorMessages)
+            {
+                Console.WriteLine(errorMessage);
+            }
+
+            // Trả về lại view với model và các lỗi
             return View(category);
         }
 

@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Liên hệ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="box-content">
+    <div class="banner-page">
+        <div class="banner-page__image"><img src="images/anhcat/LIENHE.jpg" alt="đối tác"></div>
+        <div class="banner-page__title">
+            <img src="images/anhcat/logo3.png" alt="logo">
+            <p>LIÊN HỆ</p>
+        </div>
+    </div>
+    <div class="wrapper-box box-contact">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="thumbnail h-100">
+                    <img src="images/anhcat/sp2.jpg" alt="anh lien he" class="h-100 w-100">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <p>liên hệ với chúng tôi</p>
+                    <form class="form" id="form">
+                        <div class="form-contact">
+                            <input type="text" id="username" name="username" required="" value="" placeholder="Họ tên của bạn"><label for="username"></label><small></small>
+                        </div>
+                        <div class="form-contact">
+                            <input id="email" type="text" name="email" required="" value="" placeholder="Email"><label for="email"></label><small></small>
+                        </div>
+                        <div class="form-contact">
+                            <input id="phone" type="text" name="phone" required="" value="" placeholder="Số điện thoại"><label for="phone">
+                            </label><small></small>
+                        </div>
+                        <div class="form-contact">
+                            <input id="desc" type="text" name="description" required="" value="" placeholder="Nội dung"><label for="description"></label><small></small>
+                        </div><button type="submit"
+                                      class="box-contact__btn">
+                            Gửi
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#form').on('submit', function (e) {
+            e.preventDefault(); // Ngăn không reload trang khi gửi form
+
+            const username = $('#username').val();
+            const email = $('#email').val();
+            const phone = $('#phone').val();
+            const description = $('#desc').val();
+
+            // Kiểm tra dữ liệu đầu vào (nếu cần)
+            if (!username || !email) {
+                alert("Vui lòng nhập đầy đủ họ tên và email.");
+                return;
+            }
+
+            // Gửi dữ liệu qua AJAX
+            $.ajax({
+                url: '/Contact/SaveContact',
+                type: 'POST',
+                data: { username, email, phone, description },
+                success: function (response) {
+                    if (response.success) {
+                        alert(response.message); // Hiển thị thông báo thành công
+                        $('#form')[0].reset(); // Xóa dữ liệu form
+                    } else {
+                        alert(response.message); // Hiển thị lỗi từ server
+                    }
+                },
+                error: function () {
+                    alert("Đã xảy ra lỗi khi gửi liên hệ. Vui lòng thử lại.");
+                }
+            });
+        });
+    });
+</script>

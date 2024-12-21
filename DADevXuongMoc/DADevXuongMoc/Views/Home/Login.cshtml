@@ -1,33 +1,43 @@
 ﻿@model DADevXuongMoc.Models.Customer
 
 @{
-    ViewData["Title"] = "Login Information";
+    ViewData["Title"] = "Đăng nhập tài khoản";
 }
-<br />
-<br />
-<br />
-<br />
-<br />
-<div class="border p-3">
-    <h2>Login</h2>
-    <form asp-action="Login" method="post">
-        <!-- Truyền URL trước đó thông qua input hidden -->
-        <input type="hidden" name="url" value="@ViewContext.HttpContext.Request.Query["url"]" />
 
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="container d-flex justify-content-center align-items-center" >
+    <div class="card shadow-lg p-4" style="max-width: 500px; width: 100%; border-radius: 15px;margin-top: 8rem;">
+        <h2 class="text-center mb-4">Đăng nhập tài khoản</h2>
+        <form asp-action="Login" method="post">
+            <!-- Input ẩn để truyền URL trước đó -->
+            <input type="hidden" name="url" value="@ViewContext.HttpContext.Request.Query["url"]" />
 
-        <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" asp-for="Email" />
-            <span asp-validation-for="Email" class="text-danger"></span>
+            <!-- Hiển thị lỗi tổng quát -->
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+            <!-- Email -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" asp-for="Email" placeholder="Nhập email của bạn" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <!-- Mật khẩu -->
+            <div class="mb-3">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input type="password" class="form-control" id="password" asp-for="Password" placeholder="Nhập mật khẩu của bạn" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <!-- Nút đăng nhập -->
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Đăng nhập</button>
+            </div>
+        </form>
+
+        <!-- Đường dẫn đến trang Đăng ký -->
+        <div class="text-center mt-3">
+            <p>Chưa có tài khoản? <a href="/Home/Register" class="text-primary">Đăng ký ngay</a></p>
         </div>
-
-        <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" asp-for="Password" />
-            <span asp-validation-for="Password" class="text-danger"></span>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Login</button>
-    </form>
+    </div>
 </div>
+<br />

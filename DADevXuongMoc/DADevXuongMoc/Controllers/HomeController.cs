@@ -66,6 +66,8 @@ namespace DADevXuongMoc.Controllers
     }, "DevSecuritySchema");
 
             var principal = new ClaimsPrincipal(identity);
+
+            
             await HttpContext.SignInAsync("DevSecuritySchema", principal);
 
             // Lưu thông tin khách hàng vào session
@@ -80,10 +82,6 @@ namespace DADevXuongMoc.Controllers
 
             return RedirectToAction("Index", "Home");
         }
-
-
-
-
 
 
         // GET: /Home/Register
@@ -129,6 +127,93 @@ namespace DADevXuongMoc.Controllers
 
             // Chuyển hướng về trang Login
             return RedirectToAction("Login", "Home");
+        }
+
+        //profile customer
+        public async Task<IActionResult> Profile()
+        {
+            // Lấy thông tin ID khách hàng từ Claims
+            var customerIdClaim = User.Claims.FirstOrDefault(c => c.Type == "CustomerId");
+            if (customerIdClaim == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
+
+            int customerId = int.Parse(customerIdClaim.Value);
+
+            // Lấy thông tin khách hàng từ cơ sở dữ liệu
+            var customer = await _context.Customers.FirstOrDefaultAsync(c => c.Id == customerId);
+            if (customer == null)
+            {
+                return NotFound();
+            }
+
+            return View(customer);
+        }
+        [HttpPost]
+        public IActionResult UpdateProfile(Customer model)
+        {
+            if (ModelState.IsValid)
+            {
+                // Tìm khách hàng từ cơ sở dữ liệu
+                var customer = _context.Customers.FirstOrDefault(c => c.Id == model.Id);
+
+                if (customer != null)
+                {
+                    // Cập nhật các thông tin
+                    customer.Name = model.Name;
+                    customer.Email = model.Email;
+                    customer.Username = model.Username;
+                    customer.Address = model.Address;
+                    customer.Phone = model.Phone;
+
+                    // Lưu vào cơ sở dữ liệu
+                    _context.SaveChanges();
+                }
+
+                // Sau khi cập nhật, chuyển hướng về trang Profile
+                return RedirectToAction("Profile");
+            }
+
+            // Nếu có lỗi, quay lại trang Profile với thông tin đã sửa
+            return View(model);
+        }
+
+
+
+        public IActionResult Orders()
+        {
+            var customerIdClaim = User?.FindFirst("CustomerId")?.Value;
+            if (string.IsNullOrEmpty(customerIdClaim))
+            {
+                return RedirectToAction("Login", "Home");  // Nếu không có customerId, yêu cầu đăng nhập lại.
+            }
+
+            // Lấy customerId từ Claims
+            int customerId = int.Parse(customerIdClaim);
+
+            // Truy vấn các đơn hàng của khách hàng từ cơ sở dữ liệu
+            var orders = _context.Orders.Where(o => o.Idcustomer == customerId).ToList();
+
+            // Trả về View với danh sách đơn hàng
+            return View(orders);
+        }
+
+
+        public async Task<IActionResult> OrderDetails(long id)
+        {
+            // Lấy danh sách OrdersDetail của đơn hàng
+            var orderDetails = await _context.OrdersDetails
+                .Include(od => od.IdproductNavigation) // Bao gồm thông tin sản phẩm
+                .Where(od => od.Idord == id) // Lọc theo Id của đơn hàng
+                .ToListAsync();
+
+            if (!orderDetails.Any())
+            {
+                return NotFound("Không tìm thấy chi tiết đơn hàng.");
+            }
+
+            return View(orderDetails);
         }
     }
 }

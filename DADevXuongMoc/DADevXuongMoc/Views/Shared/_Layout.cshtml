@@ -1,29 +1,26 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>@ViewData["Title"] - DevXuongMoc</title>
+
+    <!-- CSS Libraries -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/DevXuongMoc.styles.css" asp-append-version="true" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css">
+    <link rel="stylesheet" href="~/css/fonts.css">
+    <!-- Meta -->
     <meta name="theme-color" content="#000000">
     <meta name="description" content="Web site created using create-react-app">
     <link rel="apple-touch-icon" href="/logo192.png">
     <link rel="manifest" href="/manifest.json">
-    <title>Trang chủ | Nội thất Hoàng Hoan</title>
     <link rel="shortcut icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
 </head>
 <body>
     <div class="header">
@@ -42,23 +39,24 @@
             <div class="icon icon-cart">
                 <a class="link" id="icon1" asp-area="" asp-controller="Carts" asp-action="Index">
                     <i class="fi fi-bs-shopping-bag"></i>
+                    <!-- Số lượng sản phẩm hiển thị đè lên icon giỏ hàng -->
+                    <span id="cartItemCount" class="badge bg-danger position-absolute top-0 start-100 translate-middle" style="margin-top: 2rem;"></span>
                 </a>
                 <div class="box box-carts">
                     <div class="box__empty">
-                        <p class="box__title">
-                            Giỏ hàng của bạn đang trống !
+                        <p class="box__title" id="cartStatus">
+                            Giỏ hàng của bạn đang trống!
                         </p>
-                        <a href="/san-pham">
+                        <a href="/product">
                             <div class="check__btn">
                                 Mua hàng ngay
                             </div>
                         </a>
                     </div>
                 </div>
-
             </div>
-            <div class="icon icon-wishlist">
-                <a id="icon2" href="/danh-sach-yeu-thich">
+            @* <div class="icon icon-wishlist">
+                <a id="icon2" href="#">
                     <i class="fi fi-bs-heart"></i>
                 </a>
                 <div id="box2" class="box box-wishlist">
@@ -66,24 +64,38 @@
                         <p class="box__title">
                             Danh sách yêu thích trống !
                         </p>
-                        <a href="/san-pham">
+                        <a href="/product">
                             <div class="check__btn">
-                                Xem thêm sản phẩm
+                                Xem sản phẩm
                             </div>
                         </a>
                     </div>
                 </div>
-            </div>
-            <div class="icon">
+            </div> *@
+            @* <div class="icon">
                 <i class="fi fi-bs-search"></i>
             </div>
             <div id="box1" class="search-form">
-                <input id="search" type="text" class="search-box" required="" value="">
-                <label for="search">Bạn cần tìm sản phẩm gì?</label>
-                <a class="search-form__search" href="/tim-kiem?key=">
+                <input id="search" type="text" class="search-box" required="" value="" placeholder="Bạn cần tìm sản phẩm gì?" aria-label="Tìm sản phẩm">
+                <label for="search" class="sr-only">Tìm sản phẩm:</label>
+                <a class="search-form__search" href="javascript:void(0);" onclick="searchProduct()">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
             </div>
+
+            <script>
+                function searchProduct() {
+                    var searchTerm = document.getElementById('search').value.trim();
+                    if (searchTerm !== "") {
+                        // Chuyển hướng đến trang kết quả tìm kiếm với từ khóa
+                        window.location.href = "/tim-kiem?key=" + encodeURIComponent(searchTerm);
+                    } else {
+                        alert("Vui lòng nhập từ khóa tìm kiếm.");
+                    }
+                }
+            </script> *@
+
+
             <div id="menu-bar">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -107,7 +119,7 @@
                             <i class="fa-solid fa-phone"></i>
                         </div>
                         <div>
-                            <a href="tel:0999.999.999">0999.999.999</a>
+                            <a href="tel:0999.999.999"> 0999.999.999</a>
                         </div>
                     </li>
                     <li>
@@ -115,27 +127,26 @@
                             <i class="fa-regular fa-envelope"></i>
                         </div>
                         <div>
-                            <a href="mailto:cskh@hoanghoan.vn">cskh@hoanghoan.vn</a>
+                            <a href="cskh@hoanghoan.vn"> cskh@hoanghoan.vn</a>
                         </div>
                     </li>
                     <li>
                         <div class="icon">
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
-                        <div>Số 1 Nguyễn Trãi, Thanh Xuân, Hà Nội</div>
+                        <div> Số 1 Nguyễn Trãi, Thanh Xuân, Hà Nội</div>
                     </li>
                 </ul>
             </div>
             <div class="info">
                 <h5>về chúng tôi</h5>
                 <ul class="list-footer">
-                    <li>
-                        <a href="/">Giới thiệu</a>
-                    </li>
-                    <li><a href="/">Sản phẩm</a></li>
-                    <li><a href="/">Tin tức</a></li>
-                    <li><a href="/">Đối tác</a></li>
-                    <li><a href="/">Liên hệ</a></li>
+                    <li></li>
+                    <li><a href="/Aboutus">Giới thiệu</a></li>
+                    <li><a href="/product">Sản phẩm</a></li>
+                    <li><a href="/new">Tin tức</a></li>
+                    <li><a href="/partner">Đối tác</a></li>
+                    <li><a href="/contact">Liên hệ</a></li>
                 </ul>
             </div>
             <div class="info">
@@ -151,9 +162,9 @@
             </div>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
     <script>
         $(document).ready(function () {
@@ -161,7 +172,117 @@
             $('.icon').on('click', function () {
                 $('. search-form').toggleClass('active');
             });
+        });     
+       
+
+    </script>
+    <script>
+        const track = document.querySelector('.slider-track');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+
+        let currentIndex = 0; // Current index of the visible image
+        const images = document.querySelectorAll('.slider-track img');
+        const totalImages = images.length;
+        const imageWidth = images[0].clientWidth + 10; // Add margin between images
+        let autoPlayInterval; // Interval for auto-play
+
+        // Function to update the position of the slider
+        function updateSliderPosition() {
+            track.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+        }
+
+        // Next Image Functionality
+        function nextImage() {
+            if (currentIndex < totalImages - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // Loop back to start
+            }
+            updateSliderPosition();
+        }
+
+        // Previous Image Functionality
+        function prevImage() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = totalImages - 1; // Loop to the end
+            }
+            updateSliderPosition();
+        }
+
+        // Auto-Play Functionality
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(nextImage, 1000); // Change image every 3 seconds
+        }
+
+        // Stop Auto-Play on Hover
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        // Add Event Listeners
+        nextButton.addEventListener('click', () => {
+            stopAutoPlay();
+            nextImage();
+            startAutoPlay(); // Restart auto-play after manual navigation
+        });
+
+        prevButton.addEventListener('click', () => {
+            stopAutoPlay();
+            prevImage();
+            startAutoPlay(); // Restart auto-play after manual navigation
+        });
+
+        track.addEventListener('mouseenter', stopAutoPlay); // Stop auto-play on hover
+        track.addEventListener('mouseleave', startAutoPlay); // Restart auto-play when mouse leaves
+
+        // Start Auto-Play on Page Load
+        startAutoPlay();
+
+    </script>
+    @* //icon gio hang------------------------------------------ *@
+    <script>
+        function addToCart(productId) {
+            fetch(`/Carts/Add/${productId}`, {
+                method: 'GET' // Sử dụng phương thức GET thay vì POST để thêm sản phẩm vào giỏ
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // Cập nhật số lượng giỏ hàng và trạng thái giỏ hàng
+                        updateCartItemCount();
+                    }
+                })
+                .catch(error => console.error('Error adding to cart:', error));
+        }
+
+        function updateCartItemCount() {
+            fetch('/Carts/GetCartItemCount')
+                .then(response => response.json())
+                .then(data => {
+                    const cartItemCountElement = document.getElementById('cartItemCount');
+                    const cartStatusElement = document.getElementById('cartStatus');
+
+                    // Cập nhật số lượng giỏ hàng trên icon
+                    if (data > 0) {
+                        cartItemCountElement.textContent = data; // Cập nhật số lượng giỏ hàng
+                        cartItemCountElement.style.display = 'block'; // Hiển thị số lượng
+                        // Cập nhật trạng thái giỏ hàng dưới icon
+                        cartStatusElement.textContent = `Giỏ hàng của bạn đang có ${data} sản phẩm`;
+                    } else {
+                        cartItemCountElement.style.display = 'none'; // Ẩn nếu không có sản phẩm
+                        cartStatusElement.textContent = "Giỏ hàng của bạn đang trống!";
+                    }
+                })
+                .catch(error => console.error('Error fetching cart item count:', error));
+        }
+
+        // Gọi hàm updateCartItemCount khi trang được tải
+        document.addEventListener('DOMContentLoaded', function () {
+            updateCartItemCount();
         });
     </script>
+   
 </body>
 </html>

@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "F:\\dev2409gh-t2356\\NetCoreMVC\\DADevXuongMoc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{222DE542-3E17-4B1E-B58F-19B0E85FC7FE}|DADevXuongMoc\\DADevXuongMoc.csproj|f:\\dev2409gh-t2356\\netcoremvc\\dadevxuongmoc\\dadevxuongmoc\\areas\\admins\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{222DE542-3E17-4B1E-B58F-19B0E85FC7FE}|DADevXuongMoc\\DADevXuongMoc.csproj|solutionrelative:dadevxuongmoc\\areas\\admins\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{222DE542-3E17-4B1E-B58F-19B0E85FC7FE}|DADevXuongMoc\\DADevXuongMoc.csproj|f:\\dev2409gh-t2356\\netcoremvc\\dadevxuongmoc\\dadevxuongmoc\\views\\home\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{222DE542-3E17-4B1E-B58F-19B0E85FC7FE}|DADevXuongMoc\\DADevXuongMoc.csproj|solutionrelative:dadevxuongmoc\\views\\home\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{222DE542-3E17-4B1E-B58F-19B0E85FC7FE}|DADevXuongMoc\\DADevXuongMoc.csproj|f:\\dev2409gh-t2356\\netcoremvc\\dadevxuongmoc\\dadevxuongmoc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{222DE542-3E17-4B1E-B58F-19B0E85FC7FE}|DADevXuongMoc\\DADevXuongMoc.csproj|solutionrelative:dadevxuongmoc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\DADevXuongMoc\\DADevXuongMoc\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "DADevXuongMoc\\Controllers\\HomeController.cs",
+              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\DADevXuongMoc\\DADevXuongMoc\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "DADevXuongMoc\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAJkAAAAAAAAAAAAxwLQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T14:19:16.694Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\DADevXuongMoc\\DADevXuongMoc\\Areas\\Admins\\Views\\Products\\Details.cshtml",
-              "RelativeDocumentMoniker": "DADevXuongMoc\\Areas\\Admins\\Views\\Products\\Details.cshtml",
-              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\DADevXuongMoc\\DADevXuongMoc\\Areas\\Admins\\Views\\Products\\Details.cshtml",
-              "RelativeToolTip": "DADevXuongMoc\\Areas\\Admins\\Views\\Products\\Details.cshtml",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAACYAAAB5AAAA",
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "F:\\dev2409gh-t2356\\NetCoreMVC\\DADevXuongMoc\\DADevXuongMoc\\Views\\Home\\Profile.cshtml",
+              "RelativeDocumentMoniker": "DADevXuongMoc\\Views\\Home\\Profile.cshtml",
+              "ToolTip": "F:\\dev2409gh-t2356\\NetCoreMVC\\DADevXuongMoc\\DADevXuongMoc\\Views\\Home\\Profile.cshtml",
+              "RelativeToolTip": "DADevXuongMoc\\Views\\Home\\Profile.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAACOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-13T04:27:36.288Z",
+              "WhenOpened": "2024-12-20T14:14:17.453Z",
               "EditorCaption": ""
             }
           ]

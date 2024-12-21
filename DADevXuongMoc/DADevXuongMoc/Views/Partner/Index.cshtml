@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "Đối tác";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="box-content" style="margin-top:7rem">
+    <div class="banner-page">
+        <div class="banner-page__image"><img src="images/anhcat/DOITAC.jpg" alt="đối tác"></div>
+        <div class="banner-page__title">
+            <img src="images/anhcat/logo3.png" alt="">
+            <p>ĐỐI TÁC</p>
+        </div>
+    </div>
+    <div class="wrapper-box box-partner">
+        <div class="slider-container">
+            <div class="slider-track">
+                <img src="images/anhcat/sheraton.png" alt="Sheraton">
+                <img src="images/anhcat/sunrise-sapa.png" alt="Sunrise Sapa">
+                <img src="images/anhcat/the-coffee-house.png" alt="The Coffee House">
+                <img src="images/anhcat/vinpearl.png" alt="Vinpearl">
+                <img src="images/anhcat/marvella.png" alt="Marvella">
+                <img src="images/anhcat/melissa.png" alt="">
+                <img src="images/anhcat/muong-thanh.png" alt="">
+            </div>
+        </div>
+        <div class="slider-controls" hidden>
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+</div>
+<script>
+    const track = document.querySelector('.slider-track');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+
+    let currentIndex = 0; // Current index of the visible image
+    const images = document.querySelectorAll('.slider-track img');
+    const totalImages = images.length;
+    const imageWidth = images[0].clientWidth + 10; // Add margin between images
+    let autoPlayInterval; // Interval for auto-play
+
+    // Function to update the position of the slider
+    function updateSliderPosition() {
+        track.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+    }
+
+    // Next Image Functionality
+    function nextImage() {
+        if (currentIndex < totalImages - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0; // Loop back to start
+        }
+        updateSliderPosition();
+    }
+
+    // Previous Image Functionality
+    function prevImage() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = totalImages - 1; // Loop to the end
+        }
+        updateSliderPosition();
+    }
+
+    // Auto-Play Functionality
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(nextImage, 1000); // Change image every 3 seconds
+    }
+
+    // Stop Auto-Play on Hover
+    function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+    }
+
+    // Add Event Listeners
+    nextButton.addEventListener('click', () => {
+        stopAutoPlay();
+        nextImage();
+        startAutoPlay(); // Restart auto-play after manual navigation
+    });
+
+    prevButton.addEventListener('click', () => {
+        stopAutoPlay();
+        prevImage();
+        startAutoPlay(); // Restart auto-play after manual navigation
+    });
+
+    track.addEventListener('mouseenter', stopAutoPlay); // Stop auto-play on hover
+    track.addEventListener('mouseleave', startAutoPlay); // Restart auto-play when mouse leaves
+
+    // Start Auto-Play on Page Load
+    startAutoPlay();
+
+</script>

@@ -1,24 +1,98 @@
-﻿@model IEnumerable<DADevXuongMoc.Models.Product>
+﻿@model X.PagedList.IPagedList<DADevXuongMoc.Models.Product>
+@using X.PagedList.Mvc.Core;
 @{
     ViewData["Title"] = "Danh sách sản phẩm";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<div class="row bg-white " style="margin-top:8rem">
-    @foreach (var item in Model)
-    {
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="product-card">
-                <img src="@item.Image" alt="@item.Title" class="product-card-img">
-                <div class="product-card-content">
-                    <h6><a href="/product/@item.Id">@item.Title</a></h6>
-                    <p class="old-price">@string.Format("{0:#,##0}", item.PriceOld)VND</p>
-                    <p class="new-price">@string.Format("{0:#,##0}", item.PriceNew)VND</p>
-                    <a asp-controller="Carts" asp-action="Add" asp-route-id="@item.Id">
-                        <i class="fi fi-bs-shopping-bag">Mua hàng</i>
-                    </a>
-                </div>
+<div class="box-content all-product">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/images/anhcat/trai-nghiem1.jpg" alt="" width="1100"
+                     height="500">
+                @* <div class="carousel-btn"><button class="btn-buy">Mua ngay</button></div> *@
             </div>
+            <div class="carousel-item">
+                <img src="~/images/anhcat/banner.jpg" alt="" width="1100" height="500">
+            </div>
+        </div><a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a><a class="carousel-control-next" href="#demo"
+               data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+<div class="container mt-5">
+   
+    <!-- Thanh tìm kiếm -->
+    <form id="searchForm" action="" method="get" class="form-inline justify-content-center mb-4" >
+        <div class="input-group w-50">
+            <input class="form-control" name="name" id="keyword" placeholder="Nhập tên cần tìm..." value="@ViewBag.keyword" onkeyup="searchProducts()" />
         </div>
-    }
+    </form>
+
+    <!-- Danh sách sản phẩm -->
+    <div id="productList" class="row g-4">
+        @foreach (var item in Model)
+        {
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-card card h-40 shadow-sm">
+                        
+                        <!-- Ảnh sản phẩm -->
+                        <img src="@item.Image" alt="@item.Title" class="card-img-top img-fluid" style="height: 200px; width: auto; max-width: 100%; object-fit: cover; margin: 10px;">
+                        <div class="card-body">
+                            <h6 class="card-title text-truncate">
+                                <a asp-action="Details" asp-route-id="@item.Id" class="text-decoration-none text-dark">@item.Title</a>
+                            </h6>
+                            <p class="text-muted text-decoration-line-through mb-1">@string.Format("{0:#,##0}", item.PriceOld) VND</p>
+                            <p class="text-danger fw-bold">@string.Format("{0:#,##0}", item.PriceNew) VND</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a asp-controller="Carts" asp-action="Add" asp-route-id="@item.Id" class="btn btn-success w-100">
+                                <i class="fi fi-bs-shopping-bag"></i> Thêm vào giỏ hàng
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        }
+    </div>
 </div>
+
+<div class="d-flex justify-content-center mt-4">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, name = ViewBag.keyword }), new X.PagedList.Web.Common.PagedListRenderOptions
+{
+    LiElementClasses = new string[] { "page-item" },
+    PageClasses = new string[] { "page-link" }
+})
+</div>
+</div>
+<script>
+    function searchProducts() {
+        let keyword = document.getElementById("keyword").value;
+
+        // Tạo URL cho API tìm kiếm
+        let searchUrl = `?name=${encodeURIComponent(keyword)}`;
+
+        // Gửi request tìm kiếm
+        fetch(searchUrl)
+            .then(response => response.text())
+            .then(html => {
+                // Lấy phần danh sách sản phẩm từ kết quả trả về
+                let tempDiv = document.createElement("div");
+                tempDiv.innerHTML = html;
+
+                let productList = tempDiv.querySelector("#productList");
+                let pagination = tempDiv.querySelector(".d-flex");
+
+                // Cập nhật danh sách sản phẩm và phân trang
+                document.getElementById("productList").innerHTML = productList.innerHTML;
+                document.querySelector(".d-flex").innerHTML = pagination.innerHTML;
+            })
+            .catch(error => console.error("Error fetching products:", error));
+    }
+
+</script>

@@ -1,0 +1,91 @@
+﻿@model DADevXuongMoc.Models.Product
+
+@{
+    ViewData["Title"] = "Sản phẩm chi tiết";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using System.Text.RegularExpressions;
+
+@functions {
+    public string StripHtml(string input)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return string.Empty;
+
+        // Loại bỏ tất cả các thẻ HTML
+        return Regex.Replace(input, "<.*?>", string.Empty);
+    }
+
+    public string DecodeHtml(string input)
+    {
+        return System.Web.HttpUtility.HtmlDecode(input);
+    }
+
+    public string Truncate(string input, int maxLength)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return string.Empty;
+
+        if (input.Length <= maxLength)
+            return input;
+
+        return input.Substring(0, maxLength) + "...";
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Details</title>
+</head>
+<body style="margin-top: 8rem;">
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">Chi tiết sản phẩm</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="@Model.Image" alt="@Model.Title" class="img-fluid rounded shadow" style="width:23rem"/>
+                    </div>
+                    <div class="col-md-6">
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <th class="bg-light">Tiêu đề</th>
+                                    <td>@Html.DisplayFor(model => model.Title)</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-light">Mô tả</th>
+                                    <td> @Truncate(DecodeHtml(StripHtml(Model.Description)), 60)</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-light">Nội dung</th>
+                                    <td>@Truncate(DecodeHtml(StripHtml(Model.Content)), 60)</td></td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-light">Giá cũ</th>
+                                    <td class="text-decoration-line-through text-danger">@Html.DisplayFor(model => model.PriceOld)</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-light">Giá mới</th>
+                                    <td class="text-success fw-bold">@Html.DisplayFor(model => model.PriceNew)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer d-flex justify-content-between">
+                <div>
+                    <a asp-controller="Carts" asp-action="Add" asp-route-id="@Model?.Id" class="btn btn-success">
+                        <i class="fi fi-bs-shopping-bag"></i> Thêm vào giỏ hàng
+                    </a>
+                    <a asp-action="Index" class="btn btn-info">Trở lại danh sách</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

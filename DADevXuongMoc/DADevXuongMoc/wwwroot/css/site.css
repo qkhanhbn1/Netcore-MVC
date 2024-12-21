@@ -1,3 +1,146 @@
+
+.card {
+    position: relative; /* Đảm bảo thẻ card chứa badge */
+}
+
+.card-img-top {
+    position: relative; /* Đảm bảo ảnh sản phẩm chứa badge */
+}
+
+.hot-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: yellow;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Đảm bảo badge luôn nằm trên ảnh */
+}
+
+    .hot-badge::before {
+        content: '★';
+        margin-right: 5px;
+        font-size: 16px;
+    }
+.slider-container {
+    width: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+    .slider-track img {
+        width: 164px;
+        flex-shrink: 0;
+        margin: 0 5px;
+    }
+
+.slider-controls {
+    text-align: center;
+    margin-top: 10px;
+}
+
+    .slider-controls button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 0 5px;
+    }
+
+        .slider-controls button:hover {
+            background-color: #0056b3;
+        }
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #f8f8f8;
+}
+
+.search-box {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+
+}
+
+.search-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.category-dropdown {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background-color: #f8f8f8;
+    padding: 1rem;
+}
+
+    .category-dropdown select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.product-card-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-card-content {
+    margin-top: 10px;
+}
+.product-card:hover, .product-card:hover img {
+    box-shadow: 0 1px 7px 0 rgb(0 0 0 / 35%);
+    cursor: pointer;
+}
+
+    .product-card:hover img {
+        transform: scale(1.1);
+        transition: 3s all;
+    }
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.new-price {
+    color: #007bff;
+}
+
+
 * {
     font-family: Gotham-Medium, sans-serif;
     margin: 0;
@@ -119,7 +262,7 @@ html, body {
 /* Ẩn box ban đầu */
 .box-carts {
     position: absolute;
-    top: 125%;
+    top: 65%;
     transform: translateX(-40%);
     padding: 0.5rem 0;
     border-radius: 0.5rem;
@@ -135,7 +278,7 @@ html, body {
 
 .box-wishlist {
     position: absolute;
-    top: 125%;
+    top: 65%;
     transform: translateX(-40%);
     padding: 0.5rem 0;
     border-radius: 0.5rem;
@@ -157,6 +300,8 @@ html, body {
     text-align: center;
     padding-bottom: 0.75rem;
 }
+
+
 
 .header .check__btn {
     padding: 0.5rem 0.75rem;
@@ -273,8 +418,8 @@ p {
 }
 
     .product-card:hover img {
-        transform: scale(1.5);
-        transition: 3s all;
+        transform: scale(1.1);
+        transition: 2s all;
     }
 
 .product-card-content {
@@ -545,19 +690,24 @@ footer {
     position: relative;
     padding-bottom: 2rem;
     padding: 0 10%;
+    
 }
 
-#home-aboutUs:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    background: rgba(0, 0, 0, 0.6);
+.home-aboutUs::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt 50% */
+        z-index: 1; /* Đảm bảo lớp phủ nằm trên hình ảnh */
+        pointer-events: none;
+    }
+.home-aboutUs > * {
+    position: relative;
+    z-index: 2;
 }
-
 .home-aboutUs__content {
     text-align: center;
 }

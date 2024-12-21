@@ -1,5 +1,4 @@
-﻿using DADevXuongMoc.Extensions;
-using DADevXuongMoc.Models;
+﻿using DADevXuongMoc.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
@@ -68,6 +67,8 @@ namespace DADevXuongMoc.Controllers
             }
             //Lưu carts vào session, cần phải chuyển sang dữ liệu json
             HttpContext.Session.SetString("My-Cart", JsonConvert.SerializeObject(carts));
+
+            
             return RedirectToAction("Index");
         }
 
@@ -148,7 +149,7 @@ namespace DADevXuongMoc.Controllers
                 // Chuyển hướng sang trang Login và giữ lại đường dẫn hiện tại để quay lại sau khi đăng nhập
                 return RedirectToAction("Login", "Home", new { ReturnUrl = Url.Action("Orders", "Cart") });
             }
-
+            
             // Lấy thông tin khách hàng từ session
             var sessionData = HttpContext.Session.GetString("Member");
             if (string.IsNullOrEmpty(sessionData))
@@ -171,95 +172,79 @@ namespace DADevXuongMoc.Controllers
             return View(carts);
         }
 
+        [HttpPost]
         public async Task<IActionResult> OrderPay(IFormCollection form)
         {
             try
             {
-                // Kiểm tra thông tin người dùng từ session
-                var sessionData = HttpContext.Session.GetString("Member");
-                if (string.IsNullOrEmpty(sessionData))
+                //Thêm bảng orders
+                var order = new Order();
+                order.NameReciver = form["NameReciver"];
+                order.Email = form["Email"];
+                order.Phone = form["Phone"];
+                order.Address = form["Address"];
+                order.Notes = form["Notes"];
+                order.Idpayment = long.Parse(form["Idpayment"]);
+                order.OrdersDate = DateTime.Now;
+
+                var dataMember = JsonConvert.DeserializeObject<Customer>(HttpContext.Session.GetString("Member"));
+                order.Idcustomer = dataMember.Id;
+
+                decimal total = 0;
+                foreach (var item in carts)
                 {
-                    // Nếu không có thông tin đăng nhập, chuyển hướng về trang login
-                    return RedirectToAction("Login", "Home");
+                    total += item.Quantity * (decimal)item.Price;
                 }
+                order.TotalMoney = total;
 
-                var dataMember = JsonConvert.DeserializeObject<Customer>(sessionData);
-                if (dataMember == null)
-                {
-                    // Nếu không tìm thấy thông tin khách hàng, chuyển hướng
-                    return RedirectToAction("Login", "Home");
-                }
+                //tạo orderId
+                var strOrderId = "DH";
 
-                // Kiểm tra giỏ hàng
-                var carts = HttpContext.Session.GetObjectFromJson<List<Cart>>("My-Cart");
-                if (carts == null || !carts.Any())
-                {
-                    ViewBag.OrderErrorMessage = "Giỏ hàng của bạn đang trống!";
-                    return RedirectToAction("Index", "Home"); // Hoặc trả về một thông báo lỗi
-                }
+                string timestamp = DateTime.Now.ToString("yyMMddss");
+                strOrderId += timestamp;
+                order.Idorders = strOrderId;
 
-                // Tính tổng tiền
-                decimal total = carts.Sum(item => item.Quantity * (decimal)item.Price);
-
-                // Tạo đối tượng đơn hàng
-                var order = new Order
-                {
-                    NameReciver = form["NameReciver"],
-                    Email = form["Email"],
-                    Phone = form["Phone"],
-                    Address = form["Address"],
-                    Notes = form["Notes"],
-                    Idpayment = long.TryParse(form["IdPayment"], out long idPayment) ? idPayment : (long?)null,
-                    OrdersDate = DateTime.Now,
-                    Idcustomer = dataMember.Id,
-                    TotalMoney = total,
-                    Idorders = "DH" + DateTime.Now.ToString("yyyyMMddHHmmss")
-                };
-
-                // Lưu đơn hàng vào cơ sở dữ liệu
                 _context.Add(order);
                 await _context.SaveChangesAsync();
 
-                // Lấy id của đơn hàng vừa tạo
-                var createdOrder = await _context.Orders.OrderByDescending(o => o.Id).FirstOrDefaultAsync();
-                if (createdOrder == null)
+                //lấy id bảng orders
+                var dataOrder = _context.Orders.OrderByDescending(x => x.Id).FirstOrDefault();
+
+                foreach (var item in carts)
                 {
-                    ViewBag.OrderErrorMessage = "Đã xảy ra lỗi khi tạo đơn hàng!";
-                    return View();
+                    OrdersDetail od = new OrdersDetail();
+                    od.Idord = dataOrder.Id;
+                    od.Idproduct = item.Id;
+                    od.Qty = item.Quantity;
+                    od.Price = (decimal)item.Price;
+                    od.Total = (decimal)item.Total;
+                    od.ReturnQty = 0;
+
+                    _context.Add(od);
+                    await _context.SaveChangesAsync();
                 }
-
-                // Tạo và lưu chi tiết đơn hàng
-                foreach (var cartItem in carts)
-                {
-                    var orderDetail = new OrdersDetail
-                    {
-                        Idord = createdOrder.Id,
-                        Idproduct = cartItem.Id,
-                        Qty = cartItem.Quantity,
-                        Price = (decimal)cartItem.Price,
-                        Total = (decimal)(cartItem.Price * cartItem.Quantity),
-                        ReturnQty = 0
-                    };
-
-                    _context.Add(orderDetail);
-                }
-                await _context.SaveChangesAsync();
-
-                // Xóa giỏ hàng trong session
                 HttpContext.Session.Remove("My-Cart");
-
-                // Trả về trang xác nhận thành công
-                ViewBag.OrderSuccessMessage = "Đơn hàng của bạn đã được tạo thành công!";
-                return RedirectToAction("OrderSuccess", new { orderId = createdOrder.Id });
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi
-                ViewBag.OrderErrorMessage = "Đã xảy ra lỗi trong quá trình xử lý đơn hàng.";
-                Console.WriteLine("OrderPay Error: " + ex.Message);
-                return View();
+                throw;
             }
+            return View();
         }
+        public IActionResult OrderPay()
+        {
+            return View();
+        }
+
+        //icon gio hang
+        public IActionResult GetCartItemCount()
+        {
+            return Json(carts.Count); // Trả về số lượng sản phẩm trong giỏ hàng
+        }
+        //thong bao icon gio hang
+
+        
 
     }
 }
+

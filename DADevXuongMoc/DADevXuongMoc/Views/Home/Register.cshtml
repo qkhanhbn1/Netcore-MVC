@@ -1,34 +1,43 @@
 ﻿@model DADevXuongMoc.Models.Customer
-<br />
-<br />
-<br />
-<br />
-<br />
-<div class="border p-3">
-    <h2>Register</h2>
-    <form asp-action="Register" method="post">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-        <div class="mb-3">
-            <label for="fullName" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="fullName" asp-for="Name" placeholder="Enter your full name" />
-            <span asp-validation-for="Name" class="text-danger"></span>
-        </div>
+<div class="container d-flex justify-content-center" style="margin-top: 8rem;">
+    <div class="card shadow-lg p-4" style="max-width: 500px; width: 100%;border-radius: 15px">
+        <h2 class="text-center mb-4">Đăng ký tài khoản</h2>
+        <form asp-action="Register" method="post">
+            <!-- Hiển thị lỗi tổng quát -->
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
 
-        <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" asp-for="Email" placeholder="Enter your email" />
-            <span asp-validation-for="Email" class="text-danger"></span>
-        </div>
+            <!-- Họ và tên -->
+            <div class="mb-3">
+                <label for="fullName" class="form-label">Họ và tên</label>
+                <input type="text" class="form-control" id="fullName" asp-for="Name" placeholder="Điền họ và tên của bạn">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
 
-        <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" asp-for="Password" placeholder="Enter your password" />
-            <span asp-validation-for="Password" class="text-danger"></span>
-        </div>
+            <!-- Email -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" asp-for="Email" placeholder="Nhập email của bạn">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
 
-        <div class="mb-3">
-            <button type="submit" class="btn btn-primary">Register</button>
+            <!-- Mật khẩu -->
+            <div class="mb-3">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input type="password" class="form-control" id="password" asp-for="Password" placeholder="Tạo mật khẩu">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <!-- Nút Đăng ký -->
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Đăng ký</button>
+            </div>
+        </form>
+
+        <!-- Đường dẫn đến trang Đăng nhập -->
+        <div class="text-center mt-3">
+            <p>Bạn đã có tài khoản? <a href="/Home/Login" class="text-primary">Đăng nhập ngay</a></p>
         </div>
-    </form>
+    </div>
 </div>
+<br />

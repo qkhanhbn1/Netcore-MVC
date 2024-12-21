@@ -580,9 +580,7 @@ public partial class DevXuongMocContext : DbContext
         {
             entity.ToTable("ORDERS");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("ID");
+            entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.Address)
                 .HasMaxLength(500)
                 .HasColumnName("ADDRESS");
@@ -623,9 +621,7 @@ public partial class DevXuongMocContext : DbContext
         {
             entity.ToTable("ORDERS_DETAILS");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("ID");
+            entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.Idord).HasColumnName("IDORD");
             entity.Property(e => e.Idproduct).HasColumnName("IDPRODUCT");
             entity.Property(e => e.Price)
